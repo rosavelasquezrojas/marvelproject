@@ -1,0 +1,33 @@
+<!--
+* Created by rvela on 08-04-2017.
+-->
+<ion-view view-title="Detail comic">
+  <ion-content class="cards-bg social-cards item-text-wrap">
+    <div class="list card">
+      <div class="item item-thumbnail-left">
+        <img src = "{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+
+          <!-- Nombre del comic-->
+          <h1>{{comic.title}}</h1>
+
+          <!-- Fecha de publicacion-->
+          <span ng-repeat = "date in comic.dates">
+            <p ng-if="date.type==='onsaleDate'">
+              <b>Published:</b>
+              {{date.date | date:'MMMM d, y'}}
+            </p>
+          </span>
+
+          <!-- Creadores del comic-->
+          <p id="creators" ng-repeat = "creator in comic.creators.items">
+            <b>{{creator.role}}:</b>
+            {{creator.name }}
+          </p>
+
+          <br>
+          <!-- Descripcion del comic-->
+          <p ng-bind-html = "comic.description"></div>
+    </div>
+  </ion-content>
+
+</ion-view>
