@@ -3,7 +3,6 @@ angular.module('starter.controllers', [])
 .controller('AboutMeCtrl', function($scope) {})
 
 .controller('ComicCtrl', function ($scope, $http, $timeout) {
-  console.log('Comic Ctrl');
   $scope.getComics = function () {
     $http({
         method: 'GET'
@@ -18,7 +17,6 @@ angular.module('starter.controllers', [])
     })
       .then(function (response) {
         if(response != "null") {
-          console.log("comicsList");
           $scope.comics = response.data.data.results;
         }
       })
@@ -28,7 +26,6 @@ angular.module('starter.controllers', [])
       })
   }
   $scope.doRefresh = function() {
-    console.log('Refreshing!');
     $scope.getComics();
     $timeout( function() {
       $scope.$broadcast('scroll.refreshComplete');
@@ -38,8 +35,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ComicDetailCtrl', function($scope, $http, $stateParams) {
-    console.log('Comic Detail Ctrl');
-    console.log($stateParams.comicID);
     $scope.getDetailComics = function () {
       $http({
         method: 'GET'
@@ -55,8 +50,6 @@ angular.module('starter.controllers', [])
         .then(function (response) {
 
           if(response != "null") {
-            console.log("comic Detail");
-            console.log(response.data.data.results[0]);
             $scope.comic = response.data.data.results[0];
 
           }
