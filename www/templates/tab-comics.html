@@ -27,7 +27,7 @@
           </p>
         </span>
       </ion-item>
-      <ion-item ng-if="!comics.length">
+      <ion-item ng-if="!(comics | filter:search.title | filter:search.year ).length">
         <span> No items </span>
       </ion-item>
     </ion-list>
