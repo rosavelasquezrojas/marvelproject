@@ -20,7 +20,7 @@ angular.module('starter.routes', [])
 
     // Each tab has its own nav history stack:
 
-    .state('tab.dash', {
+    .state('tab.aboutme', {
       url: '/aboutme',
       views: {
         'tab-about': {

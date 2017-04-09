@@ -12,6 +12,7 @@ angular.module('starter.controllers', [])
         'apikey': '5e3c597ae8d07e4eea2e83f3d86cc938'
         , 'ts': 9
         , 'hash': '50c223cf3ba4204a34c14fc49ff9f2b8'
+        , 'limit': 50
       }
       , headers: {'Content-Type': 'application/json'}
     })
