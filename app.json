@@ -1,0 +1,6 @@
+{
+  "name": "Marvel project",
+  "description": "Lista de comics desplegados desde la API de Marvel",
+  "repository": "https://github.com/rosavelasquezrojas/marvelproject",
+  "keywords": ["ionic", "marvel", "comic"]
+}
