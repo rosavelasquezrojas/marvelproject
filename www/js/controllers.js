@@ -7,7 +7,7 @@ angular.module('starter.controllers', [])
   $scope.getComics = function () {
     $http({
         method: 'GET'
-      , url: 'http://gateway.marvel.com/v1/public/comics'
+      , url: 'https://gateway.marvel.com/v1/public/comics'
       , params: {
         'apikey': '5e3c597ae8d07e4eea2e83f3d86cc938'
         , 'ts': 9
@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
     $scope.getDetailComics = function () {
       $http({
         method: 'GET'
-        , url: 'http://gateway.marvel.com/v1/public/comics'
+        , url: 'https://gateway.marvel.com/v1/public/comics'
         , params: {
           'apikey': '5e3c597ae8d07e4eea2e83f3d86cc938'
           , 'ts': 9
